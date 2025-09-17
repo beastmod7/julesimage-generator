@@ -47,13 +47,13 @@ This guide provides detailed step-by-step instructions for setting up Firebase P
 2. **Copy Firebase Configuration**
    ```javascript
    const firebaseConfig = {
-     apiKey: "AIzaSyDYAl7yrP_1GmyuicvP4qbZThZLmW4BTSA",
-     authDomain: "auth-tester-a82a7.firebaseapp.com",
-     projectId: "auth-tester-a82a7",
-     storageBucket: "auth-tester-a82a7.firebasestorage.app",
-     messagingSenderId: "294969268845",
-     appId: "1:294969268845:web:086bf2e5cc994292567d64",
-     measurementId: "G-H3RFEX64CW"
+     apiKey: "your-api-key-here",
+     authDomain: "your-project-id.firebaseapp.com",
+     projectId: "your-project-id",
+     storageBucket: "your-project-id.firebasestorage.app",
+     messagingSenderId: "your-messaging-sender-id",
+     appId: "1:your-messaging-sender-id:web:your-app-id",
+     measurementId: "G-your-measurement-id"
    };
    ```
    - **Save this configuration** - you'll need it for your `.env` file
@@ -169,13 +169,13 @@ Create `.env.local` in your project root:
 
 ```bash
 # Firebase Configuration
-VITE_FIREBASE_APIKEY=AIzaSyDYAl7yrP_1GmyuicvP4qbZThZLmW4BTSA
-VITE_FIREBASE_AUTHDOMAIN=auth-tester-a82a7.firebaseapp.com
-VITE_FIREBASE_PROJECTID=auth-tester-a82a7
-VITE_FIREBASE_STORAGEBUCKET=auth-tester-a82a7.firebasestorage.app
-VITE_FIREBASE_MESSAGINGSENDERID=294969268845
-VITE_FIREBASE_APPID=1:294969268845:web:086bf2e5cc994292567d64
-VITE_FIREBASE_MEASUREMENTID=G-H3RFEX64CW
+VITE_FIREBASE_APIKEY=your-api-key-here
+VITE_FIREBASE_AUTHDOMAIN=your-project-id.firebaseapp.com
+VITE_FIREBASE_PROJECTID=your-project-id
+VITE_FIREBASE_STORAGEBUCKET=your-project-id.firebasestorage.app
+VITE_FIREBASE_MESSAGINGSENDERID=your-messaging-sender-id
+VITE_FIREBASE_APPID=1:your-messaging-sender-id:web:your-app-id
+VITE_FIREBASE_MEASUREMENTID=G-your-measurement-id
 
 # Optional: reCAPTCHA v3 (for App Check)
 VITE_RECAPTCHA_V3_SITE_KEY=your-recaptcha-v3-site-key

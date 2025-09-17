@@ -4,16 +4,16 @@
 `auth/invalid-app-credential` error when using phone authentication.
 
 ## Root Cause
-The API key `AIzaSyDYAl7yrP_1GmyuicvP4qbZThZLmW4BTSA` has restrictions that prevent Firebase phone authentication from working.
+Your Firebase API key has restrictions that prevent Firebase phone authentication from working.
 
 ## Solution Steps
 
 ### 1. Google Cloud Console → API Key Settings
 
 1. **Navigate to**: [Google Cloud Console](https://console.cloud.google.com)
-2. **Select Project**: `auth-tester-a82a7`
+2. **Select Project**: `your-project-id`
 3. **Go to**: APIs & Services → Credentials
-4. **Find API Key**: `AIzaSyDYAl7yrP_1GmyuicvP4qbZThZLmW4BTSA`
+4. **Find Your API Key**: Look for your browser API key
 5. **Click to Edit**
 
 ### 2. Configure API Restrictions
