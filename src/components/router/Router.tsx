@@ -1,19 +1,27 @@
-import { Dialog } from '@headlessui/react';
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense } from 'react';
 import { Outlet, RouteObject, useRoutes, BrowserRouter } from 'react-router-dom';
+import Navbar from '~/components/shared/Navbar';
 
-const Loading = () => <p className="p-4 w-full h-full text-center">Loading...</p>;
+const Loading = () => (
+  <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  </div>
+);
 
-const IndexScreen = lazy(() => import('~/components/screens/Index'));
+// Lazy load screens
+const LandingScreen = lazy(() => import('~/components/screens/Landing'));
+const DashboardScreen = lazy(() => import('~/components/screens/Dashboard'));
+const ProfileScreen = lazy(() => import('~/components/screens/Profile'));
+const AboutScreen = lazy(() => import('~/components/screens/About'));
 const Page404Screen = lazy(() => import('~/components/screens/404'));
 
 function Layout() {
   return (
-    <div>
-      <nav className="p-4 flex items-center justify-between">
-        <span>Header</span>
-      </nav>
-      <Outlet />
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 }
@@ -34,7 +42,19 @@ const InnerRouter = () => {
       children: [
         {
           index: true,
-          element: <IndexScreen />,
+          element: <LandingScreen />,
+        },
+        {
+          path: '/dashboard',
+          element: <DashboardScreen />,
+        },
+        {
+          path: '/profile',
+          element: <ProfileScreen />,
+        },
+        {
+          path: '/about',
+          element: <AboutScreen />,
         },
         {
           path: '*',

@@ -3,3 +3,34 @@ node_modules
 dist
 dist-ssr
 *.local
+
+# Environment variables (keep these private!)
+.env.local
+.env.production
+.env.development
+.env
+
+# Firebase config (if you have any)
+firebase-admin-key.json
+serviceAccountKey.json
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# macOS
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
